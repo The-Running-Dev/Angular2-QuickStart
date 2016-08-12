@@ -197,3 +197,18 @@ FakesAssemblies/
 # TypeScript project modules and generated files
 node_modules/
 *.d.ts
+
+/node_modules
+/bower_components
+/package
+/report
+/typings
+.DS_Store
+app/**/*.js
+app/**/*.js.map
+test/**/*.js
+test/**/*.js.map
+assets/styles/*.css
+
+# Ignore the app container
+/index.aspx

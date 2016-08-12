@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { HTTP_PROVIDERS } from '@angular/http';
 import { InputText, DataTable, Button, Dialog, Column, Header, Footer } from 'primeng/primeng';
-import { Car, CarService } from './shared/index';
+import { Car, CarService, LoadingService } from './shared/index';
 
 @Component({
     templateUrl: './app/app.component.html',
     selector: 'my-app',
     directives: [InputText, DataTable, Button, Dialog, Column, Header, Footer],
-    providers: [HTTP_PROVIDERS, CarService]
+    providers: [HTTP_PROVIDERS, CarService, LoadingService]
 })
 export class AppComponent {
     displayDialog: boolean;
@@ -69,4 +69,12 @@ export class AppComponent {
 class PrimeCar implements Car {
     constructor(public vin?, public year?, public brand?, public color?) {
     }
+}
+
+export class Item {
+	name: string;
+}
+
+export class Cont {
+	list: Array<Item> = [ new Item() ]
 }
